@@ -197,12 +197,9 @@ travel_agent = Agent(
     output_type=TravelPlan
 )
 
-# user -> question ->travel (flight , hotel)
-
 # --- Main Function ---
 
 async def main():
-    # Example queries to test different aspects of the system
     queries = [
         # "I need a flight from New York to Chicago tomorrow",
         # "Find me a hotel in Paris with a pool for under $300 per night"
