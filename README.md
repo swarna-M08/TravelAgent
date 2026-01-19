@@ -64,13 +64,13 @@ Structured Response: The backend returns structured JSON data (pydantic models),
 Here are the results from the AI Travel Planner:
 
 ### 1. Flight Search Result
-![Flight Search](screenshots/Result-1.PNG)
+![Flight Search](Screenshots/Result-1.PNG)
 
 ### 2. Hotel Recommendation
-![Hotel Search](screenshots/Result-2.PNG)
+![Hotel Search](Screenshots/Result-2.PNG)
 
 ### 3. Travel Activites Plan 
-![Travel Plan](screenshots/Result-3.PNG)
+![Travel Plan](Screenshots/Result-3.PNG)
 
 ### 4. Additional Result
-![Extra Result](screenshots/Result-4.PNG)
+![Extra Result](Screenshots/Result-4.PNG)
