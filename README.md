@@ -6,7 +6,7 @@ An intelligent **Travel Agent System** built with **FastAPI**, **Streamlit**, an
 ![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-Frontend-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o-412991?style=for-the-badge&logo=openai&logoColor=white)
+![Model](https://img.shields.io/badge/Model-GPT--4.1--Nano--i-412991?style=for-the-badge&logo=openai&logoColor=white)
 
 ## 🚀 Key Features
 
@@ -22,7 +22,7 @@ An intelligent **Travel Agent System** built with **FastAPI**, **Streamlit**, an
 * **Language:** Python 3.11
 * **Backend Framework:** FastAPI (Asynchronous API)
 * **Frontend Framework:** Streamlit
-* **LLM Integration:** OpenAI (GPT-4o / GPT-3.5-turbo)
+* **LLM Integration:** OpenAI (GPT-4.1 nano)
 * **Data Validation:** Pydantic
 * **Containerization:** Docker & Docker Compose
 
