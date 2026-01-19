@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 from openai import AsyncOpenAI
 from agents import Agent, OpenAIChatCompletionsModel, Runner, function_tool, set_tracing_disabled
 
-# --- 1. Load Environment Variables ---
+# 1. Load Environment Variables 
 load_dotenv() 
 
 BASE_URL = os.getenv("BASE_URL")
@@ -19,11 +19,11 @@ WEATHER_API_KEY = os.getenv("WEATHER_API_KEY")
 if not BASE_URL or not API_KEY or not MODEL_NAME:
     raise ValueError("Please set BASE_URL, API_KEY, and MODEL_NAME in your .env file.")
 
-# --- 2. Setup Client ---
+# 2. Setup Client 
 client = AsyncOpenAI(base_url=BASE_URL, api_key=API_KEY)
 set_tracing_disabled(disabled=True)
 
-# --- 3. Pydantic Models ---
+# 3. Pydantic Models 
 class FlightRecommendation(BaseModel):
     airline: str
     departure_time: str
@@ -51,11 +51,11 @@ class TravelQueryRequest(BaseModel):
 
 class TravelResponse(BaseModel):
     success: bool
-    response_type: str  # "flight", "hotel", "travel_plan", "general"
+    response_type: str  
     data: Union[FlightRecommendation, HotelRecommendation, TravelPlan, str, Dict]
     message: Optional[str] = None
 
-# --- 4. Tools (FIXED: Now Dynamic) ---
+# 4. Tools 
 
 @function_tool
 def get_weather_forecast(lat: float, lon: float) -> str:
@@ -206,5 +206,5 @@ async def query_agent(request: TravelQueryRequest):
 
 if __name__ == "__main__":
     import uvicorn
-    # Use 0.0.0.0 for Docker compatibility
+    # 0.0.0.0 for Docker compatibility
     uvicorn.run(app, host="0.0.0.0", port=8000)

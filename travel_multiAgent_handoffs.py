@@ -132,7 +132,7 @@ def search_hotels(city: str, check_in: str, check_out: str, max_price: float = N
 
     return json.dumps(hotels)
 
-# --- Main Travel Agent ---
+# Main Travel Agent 
 
 flight_agent = Agent(
     name="Flight Specialist",
@@ -197,7 +197,7 @@ travel_agent = Agent(
     output_type=TravelPlan
 )
 
-# --- Main Function ---
+# Main Function 
 
 async def main():
     queries = [
