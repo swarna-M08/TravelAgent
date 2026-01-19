@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+  # Backend (FastAPI)
+  travel_api:
+    build: .
+    container_name: travel_api_service
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    restart: always
+
+  # Frontend (Streamlit)
+  travel_ui:
+    build: .
+    container_name: travel_ui_service
+    command: streamlit run StreamlitApp.py --server.address=0.0.0.0
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    environment:
+      # Connect to the backend container named 'travel_api' inside Docker
+      - API_URL=http://travel_api:8000
+    volumes:
+      - .:/app
+    depends_on:
+      - travel_api
+    restart: always
